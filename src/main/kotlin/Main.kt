@@ -5,7 +5,11 @@ import kotlinx.serialization.json.Json
 fun main() {
     // Serializing objects
     val data = Garage(
-        vehicles = listOf(Car(brand = "VW"), Car(brand = "BMW"), Bicycle(brand = "Giant"))
+        vehicles = listOf(
+            Car(brand = "VW", engine = Gasoline(power = 100)),
+            Car(brand = "Tesla", engine = Electric(power = 250)),
+            Bicycle(brand = "Giant")
+        )
     )
 
     val string = Json.encodeToString(data)
