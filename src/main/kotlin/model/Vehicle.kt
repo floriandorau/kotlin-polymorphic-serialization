@@ -1,26 +1,21 @@
 import kotlinx.serialization.Serializable
-
-@Serializable
-data class Garage(val vehicles: List<Vehicle>)
+import model.Engine
 
 @Serializable
 sealed class Vehicle {
     abstract val brand: String
+    abstract val model: String
 }
 
 @Serializable
-sealed class Engine {
-    abstract val power: Int
-}
+data class Car(
+    override val brand: String,
+    override val model: String,
+    val engine: Engine
+) : Vehicle()
 
 @Serializable
-data class Electric(override val power: Int) : Engine()
-
-@Serializable
-data class Gasoline(override val power: Int) : Engine()
-
-@Serializable
-data class Car(override val brand: String, val engine: Engine) : Vehicle()
-
-@Serializable
-data class Bicycle(override val brand: String) : Vehicle()
+data class Bicycle(
+    override val brand: String,
+    override val model: String
+) : Vehicle()

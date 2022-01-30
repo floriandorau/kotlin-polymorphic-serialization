@@ -1,20 +1,15 @@
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.encodeToString
-import kotlinx.serialization.json.Json
+import model.Garage
+import serzializer.KtSerializer
+
+private val ktSerializer = KtSerializer()
 
 fun main() {
-    // Serializing objects
-    val data = Garage(
-        vehicles = listOf(
-            Car(brand = "VW", engine = Gasoline(power = 100)),
-            Car(brand = "Tesla", engine = Electric(power = 250)),
-            Bicycle(brand = "Giant")
-        )
-    )
+    val data = DataProvider.getData()
 
-    val string = Json.encodeToString(data)
-    println(string) // {"name":"kotlinx.serialization","language":"Kotlin"}
+    val string = ktSerializer.serialize(data)
+    println(string)
+
     // Deserializing back into objects
-    val obj = Json.decodeFromString<Garage>(string)
-    println(obj) // Project(name=kotlinx.serialization, language=Kotlin)
+    val obj = ktSerializer.deserialize<Garage>(string)
+    println(obj)
 }

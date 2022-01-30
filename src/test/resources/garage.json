@@ -1,0 +1,47 @@
+{
+  "vehicles": [
+    {
+      "type": "Car",
+      "brand": "VW",
+      "model": "Käfer",
+      "engine": {
+        "type": "combustion",
+        "power": 16,
+        "fuel": "GASOLINE",
+        "gearbox": {
+          "type": "manual",
+          "gears": 4
+        }
+      }
+    },
+    {
+      "type": "Car",
+      "brand": "Mercedes",
+      "model": "C180",
+      "engine": {
+        "type": "combustion",
+        "power": 55,
+        "fuel": "DIESEL",
+        "gearbox": {
+          "type": "automatic",
+          "gears": 5
+        }
+      }
+    },
+    {
+      "type": "Car",
+      "brand": "Tesla",
+      "model": "Model 3",
+      "engine": {
+        "type": "electric",
+        "power": 239,
+        "battery": 60
+      }
+    },
+    {
+      "type": "Bicycle",
+      "brand": "Gazelle",
+      "model": "Van Stael"
+    }
+  ]
+}

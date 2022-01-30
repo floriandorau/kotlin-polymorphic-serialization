@@ -16,6 +16,7 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
     testImplementation(kotlin("test"))
+    testImplementation("org.assertj:assertj-core:3.22.0")
 }
 
 tasks.test {
