@@ -9,20 +9,20 @@ enum class Fuel {
 
 @Serializable
 sealed class Engine {
-    abstract val power: Int
+    abstract val power: Power
 }
 
 @Serializable
 @SerialName("electric")
 data class ElectricEngine(
-    override val power: Int,
-    val battery: Int
+    override val power: Power,
+    val battery: Energy
 ) : Engine()
 
 @Serializable
 @SerialName("combustion")
 data class CombustionEngine(
-    override val power: Int,
+    override val power: Power,
     val fuel: Fuel,
     val gearbox: Gearbox
 ) : Engine()

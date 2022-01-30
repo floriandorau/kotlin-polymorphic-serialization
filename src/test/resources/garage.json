@@ -6,7 +6,10 @@
       "model": "Käfer",
       "engine": {
         "type": "combustion",
-        "power": 16,
+        "power": {
+          "unit": "hp",
+          "value": 21
+        },
         "fuel": "GASOLINE",
         "gearbox": {
           "type": "manual",
@@ -20,7 +23,10 @@
       "model": "C180",
       "engine": {
         "type": "combustion",
-        "power": 55,
+        "power": {
+          "unit": "hp",
+          "value": 74
+        },
         "fuel": "DIESEL",
         "gearbox": {
           "type": "automatic",
@@ -34,8 +40,14 @@
       "model": "Model 3",
       "engine": {
         "type": "electric",
-        "power": 239,
-        "battery": 60
+        "power": {
+          "unit": "kw",
+          "value": 239
+        },
+        "battery": {
+          "unit": "kwh",
+          "value": 60
+        }
       }
     },
     {
